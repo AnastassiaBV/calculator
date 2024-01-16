@@ -2,7 +2,18 @@
 <html>
   <head>
     <title>Вычисление дня недели</title>
-    
+    <script>
+        function calculateWeekday() {
+          var dateInput = document.getElementById('date').value;
+          
+          var weekdays = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+          
+          var date = new Date(dateInput);
+          var weekday = weekdays[date.getDay()];
+          
+          document.getElementById('result').innerHTML = "День недели для " + dateInput + " - " + weekday;
+        }
+      </script>
   </head>
   <body>
     <h1>Вычисление дня недели</h1>
